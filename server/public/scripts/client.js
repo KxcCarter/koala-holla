@@ -44,4 +44,3 @@ function getKoalas() {
     // ajax call to server to get koalas
   }
 }
-}
