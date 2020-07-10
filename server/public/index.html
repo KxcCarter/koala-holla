@@ -1,43 +1,124 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Koalla Holla</title>
     <script src="vendors/jquery-3.3.1.min.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="views/styles.css">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header>
-      <img src="images/icon.png" class="icon" />
-      <h1>Koala Holla</h1>
-      <h3>1976 Llama Comma Drive</h2>
-      <h3>Walla Walla, WA</h2>
-    </header>
-    <section id="addKoala">
-      <h2>Add Koala</h2>
-      <input type="text" id="nameIn" value="" placeholder="Name">
-      <input type="text" id="ageIn" value="" placeholder="Age">
-      <input type="text" id="genderIn" value="" placeholder="Gender">
-      <input type="text" id="readyForTransferIn" value="" placeholder="Transfer">
-      <input type="text" id="notesIn" value="" placeholder="Notes">
-      <button type="button" id="addButton">Add Koala</button>
-    </section>
-    <section>
-      <h2>All Koalas</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Ready for Transfer</th>
-            <th>Notes</th>
-          </tr>
-        </thead>
-        <tbody id="viewKoalas">
-        </tbody>
-      </table>
-    </section>
+    <nav class="site-header sticky-top py-1 bg-primary">
+      <div class="d-flex flex-column flex-md-row justify-content-between">
+        <a class="ml-2 py-1"> <img src="images/icon.png" class="icon" /> </a>
+        <h1 class="container flex-md-row">Koala Holla</h1>
+        <h4>1976 Llama Comma Drive Walla Walla, WA</h4>
+      </div>
+    </nav>
+    <hr />
+    <div class="container bg-light py-5 border border-primary rounded">
+      <div class="row">
+        <div class="col-sm-4">
+          <div id="addKoala">
+            <h2>Add Koala</h2>
+            <div class="input-group">
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="nameIn"
+                  value=""
+                  placeholder="Name"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="ageIn"
+                  value=""
+                  placeholder="Age"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="genderIn"
+                  value=""
+                  placeholder="Gender"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="readyForTransferIn"
+                  value=""
+                  placeholder="Transfer"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="notesIn"
+                  value=""
+                  placeholder="Notes"
+                />
+              </div>
+              <button
+                class="btn btn-primary form-control"
+                type="button"
+                id="addButton"
+              >
+                Add Koala
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <h2>All Koalas</h2>
+          <div class="border border-primary rounded-lg">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Ready for Transfer</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody id="viewKoalas"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Meet our Koalas-->
+    <hr>
+    <div class="container bg-light">
+      <div class="row">
+        <div class="col-sm-5">
+          <h1>Meet Scotty!</h1>
+        <picture>
+          <img
+            class="img-fluid img-thumbnail float-left"
+            src="https://images.unsplash.com/photo-1579075475207-e59cd9d39be8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80"
+            alt="Scotty the Koala hanging to a tree branch"
+          />
+        </picture>
+        </div>
+        <div class="col-sm-7 float-right">
+          <p class="lead text-right">
+            Meet Scotty the Guatemalan koala. He's a happy guy, very playful and
+            anytime he's not playing he's sleeping on his favorite branch. His
+            favorite food is eucalyptus leaves!
+          </p>
+        </div>
+    </div>
   </body>
 </html>
