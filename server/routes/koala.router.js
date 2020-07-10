@@ -51,9 +51,26 @@ koalaRouter.post('/', (req, res) => {
 });
 
 // PUT
+koalaRouter.put('/:id', (req, res) => {
+    console.log(`In PUT route`);
+    const queryText = `UPDATE koalas SET ready_to_transfer = $1 WHERE id = $2;`;
+    const id = req.params.id;
+    const transferStatus = req.body.status;
+
+    pool
+        .query(queryText, [transferStatus, id])
+        .then((dbResponse) => {
+            console.log(`In dbResponse`);
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log(error);
+            res.sendStatus(500);
+        });
+});
 
 // DELETE
-koalaRouter.delete(`/:id`, (req, res) => {
+koalaRouter.delete('/:id', (req, res) => {
     console.log(`In DELETE route`);
     const queryText = `DELETE FROM koalas WHERE id = $1;`;
     const id = req.params.id;
